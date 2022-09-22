@@ -1,0 +1,21 @@
+.imagen_card{
+    object-fit: cover;
+    width: 100%;
+    transform: scale(1);
+    transition: 0.1s ease-in-out;
+}
+.item_nav{
+    list-style: none
+}
+.imagen_card:hover{
+    position:sticky;
+    transform: scale(1.05);
+    z-index: 100;
+}
+.card_perro{
+    padding: 0;
+    background-color: white;
+}
+body{
+    background-color: azure;
+}
