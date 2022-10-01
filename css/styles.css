@@ -5,6 +5,7 @@ body {
     font-size: 100%;
     background-color: #CBECFF;
     position: relative;
+    font-family: Helvetica, sans-serif;
 }
 
 
@@ -30,11 +31,13 @@ header {
     padding: 3%;
 }
 
-h2{
+h2 {
     margin-left: 30px;
 }
 
-.enlaces_nav li{
+
+
+.enlaces_nav li {
     display: inline-block;
     padding-right: 10px;
 }
@@ -58,27 +61,104 @@ h2{
     background-color: white;
 }
 
-.redes{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    margin: 30px;
+.redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
 }
 
 .nosotros {
     background-color: #8ED6FF;
     display: inline-block;
     text-align: center;
-    padding: 100px 100px
+    padding: 50px 50px
 }
 
-.contacto__boton{
-    display: inline-flex;
-    width: 100%;
-    height: 50px;
-    background-color: #8ED6FF;
+.contacto__boton {
+    height: 100px;
+    width: 300px;
+    border: none;
+    font-size: 2rem;
+    background-color: #10537a;
+    color: white;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: ease-out 0.3s;
+    outline: none;
+    position: relative;
+    z-index: 1;
+
+}
+
+.contacto__boton:hover {
+    cursor: pointer;
+    color: black;
+
+}
+
+.contacto__boton:before {
+    transition: 0.5 all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: white;
+
+}
+
+.contacto__boton:hover:before {
+    transition: 0.5 all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.banner__inicio {
+    height: 500px;
+    background-image: url(https://img.freepik.com/premium-photo/portrait-curious-dachshund-dog-puppy-with-big-ears-isolated-white-background_77749-633.jpg?w=826);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner__nosotros {
+    height: 500px;
+    background-image: url(https://t4.ftcdn.net/jpg/01/89/47/25/240_F_189472519_5qrxIMDEEYOfknudMBG6rh9OnGNbxFdt.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner__contacto {
+    height: 500px;
+    background-image: url(https://t4.ftcdn.net/jpg/02/69/46/43/240_F_269464311_brlmlLiVhH2xKpe57wxvJpjlzaF0n2kF.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedor__textos {
+    padding-left: 300px;
+    padding-right: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.texto h1 {
+    text-align: right;
+    font-weight: 600;
+}
+
+.texto p {
+    text-align: right;
+    font-weight: 300;
 }
